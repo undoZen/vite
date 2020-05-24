@@ -1,0 +1,16 @@
+{
+  "name": "fluent-ui",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite serve src",
+    "build": "vite build src --outDir dist "
+  },
+  "dependencies": {
+    "@pika/react": "^16.13.1",
+    "@pika/react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "vite": "^0.16.6",
+    "vite-plugin-react": "^1.0.0"
+  }
+}
