@@ -6,8 +6,10 @@
     "build": "vite build src --outDir dist "
   },
   "dependencies": {
+    "@fluentui/react": "^7.115.3",
     "@pika/react": "^16.13.1",
-    "@pika/react-dom": "^16.13.1"
+    "@pika/react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "vite": "^0.16.6",

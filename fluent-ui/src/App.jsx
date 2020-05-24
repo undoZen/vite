@@ -1,32 +1,38 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { PrimaryButton } from "@fluentui/react";
+import { Link, Route } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+        <Route path="/about">
+          <p>Here I am</p>
+        </Route>
+        <Route path="/">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Hello Vite + React!</p>
+          <p>
+            <PrimaryButton onClick={() => setCount(count + 1)}>
+              count is: {count}
+            </PrimaryButton>
+          </p>
+          <p>
+            Edit <code>App.jsx</code> and save to test HMR updates.
+          </p>
+        </Route>
         <p>
-          <button onClick={() => setCount(count + 1)}>count is: {count}</button>
+          <Link to="/">Counter Example</Link>
+          <div style={{ width: "20px", display: "inline-block" }}></div>
+          <Link to="/about">About</Link>
         </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
